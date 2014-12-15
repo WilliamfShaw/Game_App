@@ -16,14 +16,14 @@
 //= require_tree .
 //= require phaser
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {
+var game = new Phaser.Game(800, 600, Phaser.AUTO, '.game', {
     preload: preload,
     create: create,
     update: update
 });
 
 function preload() {
-    game.load.tilemap('level_one', 'assets/level_1.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.tilemap('level_one', 'assets/big_level.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', 'assets/castle_0.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
 }
@@ -35,19 +35,18 @@ var cursors;
 
 function create() {
     game.stage.backgroundColor = 'black';
-    game.world.setBounds(0, 0, 2528, 608);
+    game.world.setBounds(0, 0, 4064, 608);
+    map = game.add.tilemap('level_one');
+    map.addTilesetImage("castle_0", 'tiles');
+    bgLayer = map.createLayer("Tile Layer 1");
+    collide = map.createLayer("collision");
+    map.setCollisionBetween(0, 280, true, collide);
+
     player = game.add.sprite(0, game.world.height - 300, 'dude');
     game.physics.arcade.enable(player);
     game.camera.follow(player);
-    
-    map = game.add.tilemap('level_one');
-    map.addTilesetImage("castle_0", 'tiles');
-    bgLayer = map.createLayer("Background");
-    fgLayer = map.createLayer("foreground");
-    pfLayer = map.createLayer("collision");
-   	
-    map.setCollisionBetween(0, 280, true, pfLayer);
     player.body.checkCollision.up = false;
+
     
     player.body.gravity.y = 300;
     
@@ -60,7 +59,7 @@ function create() {
 
 function update() {
 
-	game.physics.arcade.collide(player, pfLayer);
+	game.physics.arcade.collide(player, collide);
 
 	  player.body.velocity.x = 0;
  
@@ -89,7 +88,7 @@ function update() {
     //  Allow the player to jump if they are touching the ground.
     if (cursors.up.isDown && player.body.onFloor())
     {
-        player.body.velocity.y = -250;
+        player.body.velocity.y = -300;
     }
 
 }
