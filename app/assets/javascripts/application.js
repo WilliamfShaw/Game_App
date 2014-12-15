@@ -25,8 +25,9 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '.game', {
 function preload() {
     game.load.tilemap('level_one', 'assets/big_level.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', 'assets/castle_0.png');
-    game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.spritesheet('dude', 'assets/jedi.png', 32, 48, 16);
     game.load.image('bullet', 'assets/bullet.png')
+    
 }
 
 var map;
@@ -56,8 +57,8 @@ function create() {
     cursors = game.input.keyboard.createCursorKeys();
     spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
-    player.animations.add('left', [0, 1, 2, 3], 10, true);
-    player.animations.add('right', [5, 6, 7], 10, true);
+    player.animations.add('left', [4, 5, 6, 7], 10, true);
+    player.animations.add('right', [8, 9, 10, 11], 10, true);
 
     bullets = game.add.group();
     bullets.enableBody = true;
@@ -88,7 +89,7 @@ function update() {
     } else {
         //  Stand still
         player.animations.stop();
-        player.frame = 4;
+        player.frame = 0;
         facing = 'right'
     }
 
@@ -124,3 +125,4 @@ function shoot() {
     }
 
 }
+

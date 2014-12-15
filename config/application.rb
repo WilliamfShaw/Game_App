@@ -6,6 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+config.assets.paths << "#{Rails.root}/app/assets/tilemaps"
 
 module GameApp
   class Application < Rails::Application
