@@ -26,11 +26,13 @@ function preload() {
     game.load.tilemap('level_one', 'assets/big_level.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', 'assets/castle_0.png');
     game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+    game.load.image('bullet', 'assets/bullet.png')
 }
 
 var map;
 var layer;
 var cursors;
+var bulletTime = 0;
 
 
 function create() {
@@ -42,61 +44,83 @@ function create() {
     collide = map.createLayer("collision");
     map.setCollisionBetween(0, 280, true, collide);
 
-    player = game.add.sprite(0, game.world.height - 300, 'dude');
+    player = game.add.sprite(0, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
     game.camera.follow(player);
     player.body.checkCollision.up = false;
 
-    
+
     player.body.gravity.y = 300;
-    
+
     player.body.collideWorldBounds = true;
     cursors = game.input.keyboard.createCursorKeys();
-   
+    spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
     player.animations.add('left', [0, 1, 2, 3], 10, true);
-    player.animations.add('right', [5, 6, 7, 8], 10, true);
+    player.animations.add('right', [5, 6, 7], 10, true);
+
+    bullets = game.add.group();
+    bullets.enableBody = true;
+    bullets.createMultiple(100, 'bullet');
+    bullets.setAll('anchor.x', 0);
+    bullets.setAll('anchor.y', 0.2);
+    bullets.setAll('outOfBoundsKill', true);
+    bullets.setAll('checkWorldBounds', true);
+    game.physics.enable(bullets, Phaser.Physics.ARCADE);
 }
 
 function update() {
 
-	game.physics.arcade.collide(player, collide);
+    game.physics.arcade.collide(player, collide);
 
-	  player.body.velocity.x = 0;
- 
-    if (cursors.left.isDown)
-    {
+    player.body.velocity.x = 0;
+
+    if (cursors.left.isDown) {
         //  Move to the left
         player.body.velocity.x = -150;
- 
         player.animations.play('left');
-    }
-    else if (cursors.right.isDown)
-    {
+        facing = 'left'
+    } else if (cursors.right.isDown) {
         //  Move to the right
         player.body.velocity.x = 150;
- 
         player.animations.play('right');
-    }
-    else
-    {
+        facing = 'right'
+    } else {
         //  Stand still
         player.animations.stop();
- 
         player.frame = 4;
+        facing = 'right'
     }
-    
+
     //  Allow the player to jump if they are touching the ground.
-    if (cursors.up.isDown && player.body.onFloor())
-    {
+    if (cursors.up.isDown && player.body.onFloor()) {
         player.body.velocity.y = -300;
+    }
+
+    if (spaceKey.isDown) {
+        shoot();
     }
 
 }
 
+function shoot() {
 
-// function render() {
+    //  To avoid them being allowed to fire too fast we set a time limit
+    if (game.time.now > bulletTime) {
+        //  Grab the first bullet we can from the pool
+        bullet = bullets.getFirstExists(false);
 
-//     game.debug.cameraInfo(game.camera, 32, 32);
-//     game.debug.spriteCoords(player, 32, 500);
+        if (bullet) {
+            //  And fire it
+            bullet.reset(player.x, player.y + 8);
+            if (facing == 'right') {
+                bullet.body.velocity.x = 400;
+            }
+            if (facing == 'left') {
+                bullet.body.velocity.x = -400;
+            }
+            bulletTime = game.time.now + 200;
+        }
+    }
 
-// }
+}
