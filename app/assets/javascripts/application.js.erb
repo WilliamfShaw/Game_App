@@ -23,10 +23,10 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '.game', {
 });
 
 function preload() {                
-    game.load.tilemap('level_one', <%= asset_path 'big_level.json'%>, null, Phaser.Tilemap.TILED_JSON);
-    game.load.image('tiles', <%= asset_path 'castle_0.png'%>); 
-    game.load.spritesheet('dude',<%= asset_path 'jedi.png'%>, 32, 48, 16);
-    game.load.image('bullet', <%=asset_path 'bullet.png'%>) 
+    game.load.tilemap('level_one', "<%= asset_path 'big_level.json'%>", null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('tiles', "<%= asset_path 'castle_0.png'%>"); 
+    game.load.spritesheet('dude',"<%= asset_path 'jedi.png'%>", 32, 48, 16);
+    game.load.image('bullet', "<%=asset_path 'bullet.png'%>") 
     
 }
 
