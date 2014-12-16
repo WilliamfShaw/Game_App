@@ -22,11 +22,11 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '.game', {
     update: update
 });
 
-function preload() {
-    game.load.tilemap('level_one', 'assets/big_level.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.image('tiles', 'assets/castle_0.png');
-    game.load.spritesheet('dude', 'assets/jedi.png', 32, 48, 16);
-    game.load.image('bullet', 'assets/bullet.png')
+function preload() {                
+    game.load.tilemap('level_one', <%= asset_path 'big_level.json'%>, null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('tiles', <%= asset_path 'castle_0.png'%>); 
+    game.load.spritesheet('dude',<%= asset_path 'jedi.png'%>, 32, 48, 16);
+    game.load.image('bullet', <%=asset_path 'bullet.png'%>) 
     
 }
 
@@ -113,7 +113,7 @@ function shoot() {
 
         if (bullet) {
             //  And fire it
-            bullet.reset(player.x, player.y + 8);
+            bullet.reset(player.x - 20, player.y + 8);
             if (facing == 'right') {
                 bullet.body.velocity.x = 400;
             }

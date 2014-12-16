@@ -3660,3 +3660,540 @@ Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 15:10:35 -0500
 
 
 Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 15:10:35 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 15:32:00 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 236ms (Views: 234.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 15:32:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 147ms (Views: 146.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 15:33:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 121ms (Views: 119.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 15:34:00 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:16:21 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:16:21 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:16:21 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:16:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:31:26 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 505ms (Views: 503.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:31:27 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:31:28 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 139ms (Views: 137.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:31:51 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:31:52 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:31:52 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:31:52 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:31:52 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:09 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:32:10 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:32:10 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:32:10 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:32:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 142ms (Views: 139.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:32:19 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:32:20 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:32:20 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:32:20 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:32:20 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:34:35 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:34:35 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:34:35 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:34:35 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ExKnqVyGiKzbUjUMtdEfjbfYvlU7FjiGX/Q5cKtusp8="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (15.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:34:59 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:35:00 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:35:00 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:35:00 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:35:00 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-15 16:35:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 164ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCQq2txB9YwrHg2boezsQkDFRxr5puFGb8b+o8iTQLE=", "user"=>{"email"=>"williamfshaw@icloud.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (56.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'williamfshaw@icloud.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (53.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-12-15 21:35:11.208739"], ["last_sign_in_at", "2014-12-15 14:04:03.464670"], ["sign_in_count", 8], ["updated_at", "2014-12-15 21:35:11.210250"]]
+  [1m[35m (50.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 273ms (ActiveRecord: 160.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-15 16:35:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-16 09:00:27 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 378ms
+
+SyntaxError (/Users/Home/Game_App/app/assets/javascripts/application.js.erb:26: syntax error, unexpected '>'
+...( asset_path 'big_level.json'&>, null, Phaser.Tilemap.TILED_...
+...                               ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:26: syntax error, unexpected ')', expecting '='
+...ull, Phaser.Tilemap.TILED_JSON);
+...                               ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:27: syntax error, unexpected '<', expecting ')'
+    game.load.image('tiles', <%= asset_path 'castle_0.png')...
+                              ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:36: syntax error, unexpected tINTEGER, expecting ')'
+; _erbout.concat "var bulletTime = 0;\n"
+                                    ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:36: syntax error, unexpected $undefined, expecting ')'
+; _erbout.concat "var bulletTime = 0;\n"
+                                      ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:37: syntax error, unexpected $undefined, expecting ')'
+; _erbout.concat "\n"
+                   ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:38: syntax error, unexpected $undefined, expecting ')'
+; _erbout.concat "\n"
+                   ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:39: syntax error, unexpected tIDENTIFIER, expecting ')'
+; _erbout.concat "function create() {\n"
+                          ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:39: syntax error, unexpected $undefined
+; _erbout.concat "function create() {\n"
+                                      ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+; _erbout.concat "    game.stage.backgroundColor = 'black';\n"
+                          ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:40: syntax error, unexpected $undefined, expecting '}'
+; _erbout.concat "    game.stage.backgroundColor = 'black';\n"
+                                                            ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:41: syntax error, unexpected tIDENTIFIER, expecting '}'
+; _erbout.concat "    game.world.setBounds(0, 0, 4064, 608);\n"
+                          ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:41: syntax error, unexpected $undefined, expecting '}'
+; _erbout.concat "    game.world.setBounds(0, 0, 4064, 608);\n"
+                                                             ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:42: syntax error, unexpected tIDENTIFIER, expecting '}'
+; _erbout.concat "    map = game.add.tilemap('level_one');\n"
+                         ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:42: syntax error, unexpected $undefined, expecting '}'
+; _erbout.concat "    map = game.add.tilemap('level_one');\n"
+                                                           ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:43: syntax error, unexpected tIDENTIFIER, expecting '}'
+; _erbout.concat "    map.addTilesetImage(\"castle_0\", 'tiles');\n"
+                         ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:43: syntax error, unexpected $undefined, expecting ')'
+; _erbout.concat "    map.addTilesetImage(\"castle_0\", 'tiles');\n"
+                                           ^
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:131: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/Home/Game_App/app/assets/javascripts/application.js.erb:133: syntax error, unexpected keyword_end, expecting '}'
+  (in /Users/Home/Game_App/app/assets/javascripts/application.js.erb)):
+  app/assets/javascripts/application.js.erb:26: syntax error, unexpected '>'
+  app/assets/javascripts/application.js.erb:26: syntax error, unexpected ')', expecting '='
+  app/assets/javascripts/application.js.erb:27: syntax error, unexpected '<', expecting ')'
+  app/assets/javascripts/application.js.erb:36: syntax error, unexpected tINTEGER, expecting ')'
+  app/assets/javascripts/application.js.erb:36: syntax error, unexpected $undefined, expecting ')'
+  app/assets/javascripts/application.js.erb:37: syntax error, unexpected $undefined, expecting ')'
+  app/assets/javascripts/application.js.erb:38: syntax error, unexpected $undefined, expecting ')'
+  app/assets/javascripts/application.js.erb:39: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/assets/javascripts/application.js.erb:39: syntax error, unexpected $undefined
+  app/assets/javascripts/application.js.erb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/assets/javascripts/application.js.erb:40: syntax error, unexpected $undefined, expecting '}'
+  app/assets/javascripts/application.js.erb:41: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/assets/javascripts/application.js.erb:41: syntax error, unexpected $undefined, expecting '}'
+  app/assets/javascripts/application.js.erb:42: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/assets/javascripts/application.js.erb:42: syntax error, unexpected $undefined, expecting '}'
+  app/assets/javascripts/application.js.erb:43: syntax error, unexpected tIDENTIFIER, expecting '}'
+  app/assets/javascripts/application.js.erb:43: syntax error, unexpected $undefined, expecting ')'
+  app/assets/javascripts/application.js.erb:131: syntax error, unexpected keyword_ensure, expecting '}'
+  app/assets/javascripts/application.js.erb:133: syntax error, unexpected keyword_end, expecting '}'
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3809067765554205475_70237216764540'
+  app/controllers/application_controller.rb:7:in `index'
+
+
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (40.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 308ms (Views: 266.2ms | ActiveRecord: 40.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-16 09:00:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-16 09:01:07 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-16 09:01:10 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-16 09:01:11 -0500
