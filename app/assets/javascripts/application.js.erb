@@ -16,7 +16,9 @@
 //= require_tree .
 //= require phaser
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '.game', {
+
+
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {
     preload: preload,
     create: create,
     update: update
@@ -26,17 +28,22 @@ function preload() {
     game.load.tilemap('level_one', "<%= asset_path 'big_level.json'%>", null, Phaser.Tilemap.TILED_JSON);
     game.load.image('tiles', "<%= asset_path 'castle_0.png'%>"); 
     game.load.spritesheet('dude',"<%= asset_path 'jedi.png'%>", 32, 48, 16);
-    game.load.image('bullet', "<%=asset_path 'bullet.png'%>") 
-    
+    game.load.spritesheet('badGuy', "<%= asset_path 'yuuzhenvong.png'%>", 32, 48, 16);
+    game.load.image('bullet', "<%=asset_path 'bullet.png'%>")
+    game.load.image('boom', "<%=asset_path 'explo.png'%>", 32, 48, 17);
 }
 
 var map;
 var layer;
 var cursors;
 var bulletTime = 0;
+var badGroup;
+var score = 0;
 
 
 function create() {
+
+    //Create the Game World
     game.stage.backgroundColor = 'black';
     game.world.setBounds(0, 0, 4064, 608);
     map = game.add.tilemap('level_one');
@@ -45,21 +52,36 @@ function create() {
     collide = map.createLayer("collision");
     map.setCollisionBetween(0, 280, true, collide);
 
+
+    // Add the player to the game world and set physics
     player = game.add.sprite(0, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
     game.camera.follow(player);
+    player.health = 100;
     player.body.checkCollision.up = false;
-
-
     player.body.gravity.y = 300;
-
     player.body.collideWorldBounds = true;
-    cursors = game.input.keyboard.createCursorKeys();
-    spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-
     player.animations.add('left', [4, 5, 6, 7], 10, true);
     player.animations.add('right', [8, 9, 10, 11], 10, true);
+    
 
+    //Add bad guys to the game world 
+    badGuy = game.add.group();
+    game.physics.arcade.enable(badGuy, Phaser.Physics.ARCADE);
+    badGuy.enableBody = true;
+    createBadGuys();
+    
+    //Add explosion animation 
+    explosions = game.add.group();
+    explosions.createMultiple(30, 'boom');
+    explosions.forEach(setupBadGuy, this);
+
+    scoreString = 'Score : ';
+    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+    scoreText.fixedToCamera = true;
+   
+
+    //Creates the bullets the hero shoots, making each one a collidable object    
     bullets = game.add.group();
     bullets.enableBody = true;
     bullets.createMultiple(100, 'bullet');
@@ -68,11 +90,35 @@ function create() {
     bullets.setAll('outOfBoundsKill', true);
     bullets.setAll('checkWorldBounds', true);
     game.physics.enable(bullets, Phaser.Physics.ARCADE);
+
+ 
+    // Sets the game controls
+    cursors = game.input.keyboard.createCursorKeys();
+    spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
+
 }
+
+function createBadGuys() {
+    var numberOfBadGuys = 50;
+     for(var i =0; i < numberOfBadGuys; i++){
+        badGuy1 = badGuy.create(game.world.randomX, game.world.randomY, 'badGuy', 3, true);
+        badGuy1.health = 100;
+        badGuy1.collideWorldBounds = true;
+        badGuy1.animations.add('left', [4, 5, 6, 7], 10, true);
+        badGuy1.animations.add('right', [8, 9, 10, 11], 10, true);
+        game.physics.arcade.enable(badGuy1);
+        badGuy1.body.gravity.y = 300;
+
+    }
+}
+
 
 function update() {
 
+    // Sets the layer that the player can collide with in the game world
     game.physics.arcade.collide(player, collide);
+    game.physics.arcade.collide(badGuy, collide);
 
     player.body.velocity.x = 0;
 
@@ -98,21 +144,53 @@ function update() {
         player.body.velocity.y = -300;
     }
 
+    // Allow player to shoot 
     if (spaceKey.isDown) {
         shoot();
     }
 
+    game.physics.arcade.overlap(bullets, badGuy, killEnemy, null, this);
+    game.physics.arcade.overlap(badGuy, player, hurtHero, null, this);
+
+
+}
+
+function setupBadGuy(badGuy) {
+    badGuy.anchor.x = 0.5;
+    badGuy.anchor.y = 0.5;
+    badGuy.animations.add('boom');
+}
+
+function killEnemy(bullet, badGuy) {
+    bullet.kill();
+    badGuy.health -= 20;
+
+    if(badGuy.health == 0){
+    score += 50;
+    scoreText.text = scoreString + score;
+    badGuy.kill();
+    var explosion = explosions.getFirstExists(false);
+    explosion.reset(badGuy.body.x, badGuy.body.y);
+    explosion.play('boom', 10, false, true)};
+
+}
+
+function hurtHero(player) {
+    player.health -= 20;
+    if(player.health == 0){
+        player.kill()
+    }
 }
 
 function shoot() {
 
-    //  To avoid them being allowed to fire too fast we set a time limit
+    // limit the timing of firing bullets
     if (game.time.now > bulletTime) {
-        //  Grab the first bullet we can from the pool
+        //  Grab the first bullet we can from the group of bullets 
         bullet = bullets.getFirstExists(false);
 
         if (bullet) {
-            //  And fire it
+            //  Fire from set poistion based on the players position
             bullet.reset(player.x - 20, player.y + 8);
             if (facing == 'right') {
                 bullet.body.velocity.x = 400;
