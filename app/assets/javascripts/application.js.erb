@@ -15,8 +15,27 @@
 //= require turbolinks
 //= require_tree .
 //= require phaser
+//= require game.js.erb
 
+$(function () {
+    fetchAndRenderScore();
+});
 
+function fetchAndRenderScore() {
+    $.get('/scores').done(function (score) {
+        score.forEach(renderScore);
+    })
+}
+
+function renderScore(score) {
+    var score = score.score;
+
+    var ul = $('<ul>').addClass('scoreList');
+    var listItem = $('<li>').text(score).addClass('scoreValue');
+    ul.append(listItem)
+    $('.scores').append(ul)
+   
+}
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {
     preload: preload,
@@ -38,7 +57,8 @@ var layer;
 var cursors;
 var bulletTime = 0;
 var badGroup;
-var score = 0;
+var totalScore = 0;
+
 
 
 function create() {
@@ -53,13 +73,14 @@ function create() {
     map.setCollisionBetween(0, 280, true, collide);
 
 
+
     // Add the player to the game world and set physics
-    player = game.add.sprite(0, game.world.height - 150, 'dude');
+    player = game.add.sprite(game.world.width - 4063, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
     game.camera.follow(player);
     player.health = 100;
     player.body.checkCollision.up = false;
-    player.body.gravity.y = 300;
+    player.body.gravity.y = 350;
     player.body.collideWorldBounds = true;
     player.animations.add('left', [4, 5, 6, 7], 10, true);
     player.animations.add('right', [8, 9, 10, 11], 10, true);
@@ -77,7 +98,7 @@ function create() {
     explosions.forEach(setupBadGuy, this);
 
     scoreString = 'Score : ';
-    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+    scoreText = game.add.text(10, 10, scoreString + totalScore, { font: '34px Arial', fill: '#fff' });
     scoreText.fixedToCamera = true;
    
 
@@ -95,12 +116,13 @@ function create() {
     // Sets the game controls
     cursors = game.input.keyboard.createCursorKeys();
     spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+    
 
 
 }
 
 function createBadGuys() {
-    var numberOfBadGuys = 50;
+    var numberOfBadGuys = 200;
      for(var i =0; i < numberOfBadGuys; i++){
         badGuy1 = badGuy.create(game.world.randomX, game.world.randomY, 'badGuy', 3, true);
         badGuy1.health = 100;
@@ -109,13 +131,14 @@ function createBadGuys() {
         badGuy1.animations.add('right', [8, 9, 10, 11], 10, true);
         game.physics.arcade.enable(badGuy1);
         badGuy1.body.gravity.y = 300;
+        badGuy1.play('left', 5);
+        badGuy1.body.velocity.x = -10;
 
     }
 }
 
 
 function update() {
-
     // Sets the layer that the player can collide with in the game world
     game.physics.arcade.collide(player, collide);
     game.physics.arcade.collide(badGuy, collide);
@@ -149,9 +172,18 @@ function update() {
         shoot();
     }
 
-    game.physics.arcade.overlap(bullets, badGuy, killEnemy, null, this);
-    game.physics.arcade.overlap(badGuy, player, hurtHero, null, this);
+    if(player.body.x === 3985 && player.body.y === 208){
+        winString = " YOU WIN CLICK SCREEN TO RESTART"
+        winText = game.add.text(50, 100, winString, { font: '34px Arial', fill: '#fff' });
+        winText.fixedToCamera = true;
+        //the "click to restart" handler
+        game.paused = true;
+        game.input.onTap.addOnce(restart,this);
+    }
+    
 
+    game.physics.arcade.overlap(bullets, badGuy, killEnemy, null, this);
+    // game.physics.arcade.overlap(badGuy, player, hurtHero, null, this);
 
 }
 
@@ -163,11 +195,11 @@ function setupBadGuy(badGuy) {
 
 function killEnemy(bullet, badGuy) {
     bullet.kill();
-    badGuy.health -= 20;
+    badGuy.health -= 50;
 
     if(badGuy.health == 0){
-    score += 50;
-    scoreText.text = scoreString + score;
+    totalScore += 50;
+    scoreText.text = scoreString + totalScore;
     badGuy.kill();
     var explosion = explosions.getFirstExists(false);
     explosion.reset(badGuy.body.x, badGuy.body.y);
@@ -175,12 +207,16 @@ function killEnemy(bullet, badGuy) {
 
 }
 
-function hurtHero(player) {
-    player.health -= 20;
-    if(player.health == 0){
-        player.kill()
-    }
+function render() {
+    
 }
+
+// function hurtHero(player) {
+//     player.health -= 20;
+//     if(player.health == 0){
+//         player.kill()
+//     }
+// }
 
 function shoot() {
 
@@ -201,6 +237,27 @@ function shoot() {
             bulletTime = game.time.now + 200;
         }
     }
+
+}
+
+
+function restart () {
+
+    var newScore = {
+        score: {
+            score: totalScore
+        }
+    }
+
+    $.post('/scores', newScore)
+    //  And brings the aliens back from the dead :)
+    badGuy.removeAll();
+    create();
+    //hides the text
+    winText.visible = false;
+    game.paused = false;
+    totalScore = 0;
+    game.state.start(game.state.current);
 
 }
 

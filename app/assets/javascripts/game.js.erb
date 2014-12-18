@@ -1,13 +1,102 @@
 //= require phaser
 
-// var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {
-//     preload: preload,
-//     create: create,
-//     update: update
-// });
+// var CANVAS_WIDTH = 800;
+// var CANVAS_HEIGHT = 600;
 
-// var icons = [];
+// var game = new Phaser.Game(CANVAS_WIDTH, CANVAS_HEIGHT, Phaser.AUTO, 'game', { preload: preload, create: create, update: update});
+// var holdicons = []
+
+// var text;
+// var counter = 0;
 
 // function preload() {
+// 	game.load.image('levelselect', "<%= asset_path 'explo.png'%>", 96, 96);
+
+// }
+
+// function create() {
+// 	game.stage.backgroundColor = 'black';
 	
+	
+//   //  This creates a simple sprite that is using our loaded image and
+//   //  displays it on-screen and assign it to a variable
+//   var image = game.add.sprite(game.world.centerX, game.world.centerY, 'levelselect');
+
+//   //  Moves the image anchor to the middle, so it centers inside the game properly
+//   image.anchor.set(0.5);
+
+//   //  Enables all kind of input actions on this image (click, etc)
+//   image.inputEnabled = true;
+
+//   text = game.add.text(10, 16, '', { font: '34px Arial', fill: 'white' });
+
+//   image.events.onInputDown.add(listener, this);
+	
+// 	createLevelIcons();
+// 	animateLevelIcons();
+
+	
+// }
+
+// function update() {
+// 	// nothing to do but wait until player selects a level
+// }
+
+// function createLevelIcons() {
+
+// 	  titleString = 'SELECT A LEVEL';
+//     titleText = game.add.text(250, 10, titleString, { font: '34px Arial', fill: '#fff' });
+//     titleText.fixedToCamera = true;
+
+// 	var levelnr = 0;
+
+// 	for (var y=0; y < 3; y++) {
+// 		for (var x=0; x < 4; x++) {
+// 			// player progress info for this level
+// 			levelnr = levelnr + 1;
+
+// 			// calculate position on screen
+// 			var xpos = 160 + (x*128);
+// 			var ypos = 120 + (y*128);
+
+// 			// create icon
+// 			holdicons[levelnr-1] = createLevelIcon(xpos, ypos);
+// 		};
+// 	};
+// }
+
+// function createLevelIcon(xpos, ypos, levelnr) {
+
+// 	// create new group
+// 	var IconGroup = game.add.group();
+// 	IconGroup.x = xpos;
+// 	IconGroup.y = ypos;
+
+// 	// add background
+// 	var icon1 = game.add.sprite(0, 0, 'levelselect', 0);
+// 	IconGroup.add(icon1);
+	
+// 	return IconGroup;
+// }
+
+// function animateLevelIcons() {
+
+// 	// slide all icons into screen
+// 	for (var i=0; i < holdicons.length; i++) {
+// 		// get variables
+// 		var IconGroup = holdicons[i];
+// 		IconGroup.y = IconGroup.y + 600;
+// 		var y = IconGroup.y;
+
+// 		// tween animation
+// 		game.add.tween(IconGroup).to( {y: y-600}, 500, Phaser.Easing.Back.Out, true, (i*40));
+// 	};
+// }
+
+
+// function listener () {
+
+//     counter++;
+//     text.text = "You clicked " + counter + " times!";
+
 // }
