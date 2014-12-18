@@ -29811,3 +29811,200 @@ Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-18 16:12:03 -0500
 
 
 Started GET "/assets/explo.png" for 127.0.0.1 at 2014-12-18 16:12:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-18 16:59:27 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 1202ms (Views: 1201.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-18 16:59:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:28 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:28 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/scores" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+Processing by ScoresController#index as */*
+  [1m[35mScore Load (0.4ms)[0m  SELECT "scores".* FROM "scores"
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/yuuzhenvong.png" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/assets/explo.png" for 127.0.0.1 at 2014-12-18 16:59:29 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 140ms (Views: 138.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-18 16:59:40 -0500
+
+
+Started GET "/scores" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+Processing by ScoresController#index as */*
+  [1m[35mScore Load (0.4ms)[0m  SELECT "scores".* FROM "scores"
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started GET "/assets/yuuzhenvong.png" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started GET "/assets/explo.png" for 127.0.0.1 at 2014-12-18 16:59:41 -0500
+
+
+Started POST "/scores" for 127.0.0.1 at 2014-12-18 17:00:32 -0500
+Processing by ScoresController#create as */*
+  Parameters: {"score"=>{"score"=>"4600"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "scores" ("created_at", "score", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-12-18 22:00:32.442134"], ["score", 4600], ["updated_at", "2014-12-18 22:00:32.442134"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "scores_users" ("score_id", "user_id") VALUES ($1, $2)  [["score_id", 4], ["user_id", 1]]
+  [1m[36m (21.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/scores/4
+Completed 302 Found in 35ms (ActiveRecord: 22.8ms)
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-18 17:00:32 -0500
+
+
+Started GET "/scores/4" for 127.0.0.1 at 2014-12-18 17:00:32 -0500
+Processing by ScoresController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[35mScore Load (0.6ms)[0m  SELECT  "scores".* FROM "scores"  WHERE "scores"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template scores/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Home/Game_App/app/views"
+  * "/Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/devise-3.4.1/app/views"
+  * "/Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/twitter-bootstrap-rails-3.2.0/app/views"
+):
+  app/controllers/scores_controller.rb:12:in `show'
+
+
+  Rendered /Users/Home/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/phaser.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/phaser.min.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/scores" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+Processing by ScoresController#index as */*
+  [1m[35mScore Load (0.3ms)[0m  SELECT "scores".* FROM "scores"
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/big_level.json" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/castle_0.png" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/jedi.png" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/yuuzhenvong.png" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/bullet.png" for 127.0.0.1 at 2014-12-18 17:00:34 -0500
+
+
+Started GET "/assets/explo.png" for 127.0.0.1 at 2014-12-18 17:00:34 -0500

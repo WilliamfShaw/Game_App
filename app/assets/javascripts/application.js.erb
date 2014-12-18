@@ -183,7 +183,7 @@ function update() {
     
 
     game.physics.arcade.overlap(bullets, badGuy, killEnemy, null, this);
-    // game.physics.arcade.overlap(badGuy, player, hurtHero, null, this);
+    game.physics.arcade.overlap(badGuy, player, hurtHero, null, this);
 
 }
 
@@ -211,12 +211,12 @@ function render() {
     
 }
 
-// function hurtHero(player) {
-//     player.health -= 20;
-//     if(player.health == 0){
-//         player.kill()
-//     }
-// }
+function hurtHero(player) {
+    player.health -= 20;
+    if(player.health == 0){
+        player.kill()
+    }
+}
 
 function shoot() {
 
